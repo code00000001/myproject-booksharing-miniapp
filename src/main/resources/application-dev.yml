@@ -7,7 +7,7 @@ spring:
     name: booksharing
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://localhost:3306/booksharing?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/booksharing?useUnicode=true&characterEncoding=utf-8&&serverTimezone=Asia/Shanghai
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -16,5 +16,7 @@ spring:
       min-idle: 5
       max-active: 20
       max-wait: 60000
+  jpa:
+    show-sql: true
 
 

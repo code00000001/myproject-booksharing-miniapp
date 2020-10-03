@@ -1,7 +1,12 @@
 package com.book.sharing;
 
+import com.book.sharing.model.user.UserModel;
+import com.book.sharing.service.UserService;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.Date;
 
 /**
  * @author code00000001
@@ -10,9 +15,20 @@ import org.springframework.boot.test.context.SpringBootTest;
  */
 @SpringBootTest
 class SharingApplicationTests {
+    @Autowired
+    private UserService userService;
 
     @Test
-    void contextLoads() {
+    public void testSaveUser() {
+        UserModel userModel = new UserModel();
+        userModel.setUserName("zhangsan");
+        userModel.setSex(1);
+        userModel.setWechatId("123456");
+        userModel.setLocation("shenzhen");
+        userModel.setPhoneNum("10086");
+        userModel.setCreateTime(new Date());
+        userModel.setUpdateTime(new Date());
+        userService.save(userModel);
     }
 
 }
