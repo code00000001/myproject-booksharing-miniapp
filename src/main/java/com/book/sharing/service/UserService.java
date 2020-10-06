@@ -8,4 +8,6 @@ import com.book.sharing.model.user.UserModel;
  */
 public interface UserService {
     Object save(UserModel userModel);
+
+    Object get(String id);
 }

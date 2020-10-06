@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 /**
  * @author code00000001
@@ -26,8 +26,8 @@ class SharingApplicationTests {
         userModel.setWechatId("123456");
         userModel.setLocation("shenzhen");
         userModel.setPhoneNum("10086");
-        userModel.setCreateTime(new Date());
-        userModel.setUpdateTime(new Date());
+        userModel.setCreateTime(LocalDateTime.now());
+        userModel.setUpdateTime(LocalDateTime.now());
         userService.save(userModel);
     }
 
