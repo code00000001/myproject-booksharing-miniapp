@@ -25,7 +25,7 @@ public class GsonUtil {
     static {
         // gson = new Gson();
         // 当使用GsonBuilder方式时属性为空的时候输出来的json字符串是有键值key的,显示形式是"key":null，而直接new出来的就没有"key":null的
-        gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
+        gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").registerTypeAdapterFactory(HibernateProxyTypeAdapter.FACTORY).create() ;;
     }
 
     private GsonUtil() {

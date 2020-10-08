@@ -31,8 +31,8 @@ public class BookModel extends BaseModel {
     private String synopsis;
     @Column(name = "book_photo_url")
     private String bookPhotoUrl;
-    @Column(name = "book_category")
-    private String bookCategory;
+    @Column(name = "book_category_id")
+    private int bookCategoryId;
     @Column(name = "user_comment")
     private String userComment;
     @Column(name = "user_id")
